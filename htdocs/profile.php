@@ -5,7 +5,7 @@
  * Date: 28/07/2016
  * Time: 11:36
  */
-include("header.html");
+include("../includes/header.html");
 
 ?>
 
@@ -13,6 +13,6 @@ include("header.html");
 
 <?php
 
-include("footer.html");
+include("../includes/footer.html");
 
 ?>
