@@ -1,33 +1,34 @@
 
-
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = array();
+    // register the user in the database
+    require("../database_connect.php");
 
     if (empty($_POST["first_name"])){
         $errors[] = "You forgot to enter your first name.";
     } else {
         // trim - Strip whitespace (or other characters) from the beginning and end of a string
-        $fn = trim($_POST['first_name']);
+        $fn = mysqli_real_escape_string($dbc, trim($_POST['first_name']));
     }
 
     if (empty($_POST['last_name'])) {
         $errors[ ] = 'You forgot to enter your last name.';
     } else {
-        $ln = trim($_POST['last_name']);
+        $ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
     }
     if (empty($_POST['email'])) {
         $errors[ ] = 'You forgot to enter your email address.';
     } else {
-        $e = trim($_POST['email']);
+        $e = mysqli_real_escape_string($dbc, trim($_POST['email']));
     }
 
     if (!empty($_POST['pass1'])) {
         if ($_POST['pass1'] != $_POST['pass2']) {
             $errors[ ] = 'Your password did not match the confirmed password.';
         } else {
-            $p = trim($_POST['pass1']);
+            $p = mysqli_real_escape_string($dbc, trim($_POST['pass1']));
         }
     } else {
         $errors[ ] = 'You forgot to enter your password.';
@@ -35,8 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty ($errors)){
 
-        // register the user in the database
-        require("../database_connect.php");
 
         //build query string
         $q = "INSERT INTO users (first_name, last_name, email, pass, registration_date, status) VALUES ('$fn',
@@ -61,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         echo '</p><p>Please try again.</p><p><br /></p>';
     }
-
+    mysqli_close($dbc);
 }
 
 ?>

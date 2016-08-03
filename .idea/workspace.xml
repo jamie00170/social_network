@@ -25,8 +25,8 @@
       <file leaf-file-name="database_connect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database_connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
               </folding>
@@ -34,14 +34,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registration.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/registration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38554215">
-              <caret line="84" column="71" selection-start-line="84" selection-start-column="71" selection-end-line="84" selection-end-column="71" />
+            <state vertical-scroll-proportion="-32.03846">
+              <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
               <folding>
-                <marker date="1470218050636" expanded="true" signature="1116:1259" placeholder="INSERT INTO ..." />
-                <marker date="1470218050636" expanded="true" signature="1116:1272" placeholder="INSERT INTO ..." />
+                <marker date="1470223836913" expanded="true" signature="1239:1382" placeholder="INSERT INTO ..." />
+                <marker date="1470223836913" expanded="true" signature="1239:1395" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="following.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/htdocs/following.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16783217">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#60#141#0#PHP" expanded="true" />
+                <marker date="1470224429808" expanded="true" signature="460:564" placeholder="SELECT CONCA..." />
+                <marker date="1470224429808" expanded="true" signature="460:602" placeholder="SELECT CONCA..users..." />
               </folding>
             </state>
           </provider>
@@ -125,14 +139,15 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/registration.html" />
         <option value="$PROJECT_DIR$/codify.php" />
-        <option value="$PROJECT_DIR$/database_connect.php" />
         <option value="$PROJECT_DIR$/styles.css" />
         <option value="$PROJECT_DIR$/header.html" />
         <option value="$PROJECT_DIR$/registration.php" />
-        <option value="$PROJECT_DIR$/includes/header.html" />
         <option value="$PROJECT_DIR$/htdocs/index.php" />
         <option value="$PROJECT_DIR$/htdocs/registration.html" />
+        <option value="$PROJECT_DIR$/includes/header.html" />
         <option value="$PROJECT_DIR$/htdocs/registration.php" />
+        <option value="$PROJECT_DIR$/database_connect.php" />
+        <option value="$PROJECT_DIR$/htdocs/following.php" />
       </list>
     </option>
   </component>
@@ -148,10 +163,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -243,7 +257,7 @@
       <recent name="C:\Users\Jamie\PhpstormProjects\Social_Network\htdocs" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.registration.php">
+  <component name="RunManager" selected="JavaScript Debug.following.php">
     <configuration default="false" name="registration.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Social_Network/htdocs/registration.html">
       <method />
     </configuration>
@@ -254,6 +268,9 @@
       <method />
     </configuration>
     <configuration default="false" name="registration.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Social_Network/htdocs/registration.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="following.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Social_Network/htdocs/following.php">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -282,18 +299,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.registration.html" />
       <item index="1" class="java.lang.String" itemvalue="PHP Script.codify.php" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.header.html" />
       <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.registration.php" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.following.php" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.registration.php" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.header.html" />
-        <item index="2" class="java.lang.String" itemvalue="PHP Script.codify.php" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.registration.html" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.following.php" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.registration.php" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.registration.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.header.html" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.codify.php" />
       </list>
     </recent_temporary>
   </component>
@@ -311,12 +330,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -367,8 +386,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1470218050636" expanded="true" signature="1116:1259" placeholder="INSERT INTO ..." />
-            <marker date="1470218050636" expanded="true" signature="1116:1272" placeholder="INSERT INTO ..." />
+            <marker date="1470223836913" expanded="true" signature="1239:1382" placeholder="INSERT INTO ..." />
+            <marker date="1470223836913" expanded="true" signature="1239:1395" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -436,8 +455,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1470218050636" expanded="true" signature="1116:1259" placeholder="INSERT INTO ..." />
-            <marker date="1470218050636" expanded="true" signature="1116:1272" placeholder="INSERT INTO ..." />
+            <marker date="1470223836913" expanded="true" signature="1239:1382" placeholder="INSERT INTO ..." />
+            <marker date="1470223836913" expanded="true" signature="1239:1395" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -505,8 +524,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
           <folding>
-            <marker date="1470218050636" expanded="true" signature="1116:1259" placeholder="INSERT INTO ..." />
-            <marker date="1470218050636" expanded="true" signature="1116:1272" placeholder="INSERT INTO ..." />
+            <marker date="1470223836913" expanded="true" signature="1239:1382" placeholder="INSERT INTO ..." />
+            <marker date="1470223836913" expanded="true" signature="1239:1395" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -567,16 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database_connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -619,11 +628,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/registration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38554215">
-          <caret line="84" column="71" selection-start-line="84" selection-start-column="71" selection-end-line="84" selection-end-column="71" />
+        <state vertical-scroll-proportion="-32.03846">
+          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
           <folding>
-            <marker date="1470218050636" expanded="true" signature="1116:1259" placeholder="INSERT INTO ..." />
-            <marker date="1470218050636" expanded="true" signature="1116:1272" placeholder="INSERT INTO ..." />
+            <marker date="1470223836913" expanded="true" signature="1239:1382" placeholder="INSERT INTO ..." />
+            <marker date="1470223836913" expanded="true" signature="1239:1395" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database_connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/following.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16783217">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#60#141#0#PHP" expanded="true" />
+            <marker date="1470224429808" expanded="true" signature="460:564" placeholder="SELECT CONCA..." />
+            <marker date="1470224429808" expanded="true" signature="460:602" placeholder="SELECT CONCA..users..." />
           </folding>
         </state>
       </provider>
