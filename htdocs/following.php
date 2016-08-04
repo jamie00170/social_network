@@ -3,45 +3,69 @@
 /**
  * Created by PhpStorm.
  * User: Jamie
- * Date: 03/08/2016
- * Time: 10:58
+ * Date: 04/08/2016
+ * Time: 16:26
  */
-// For now contains functionality to return all users
-// needs to be updated to show users who the current user is following who are active(position update din last 48 hours?)
-
-
-include ('../includes/header.html');
-
-echo '<h1>Registered Users</h1>';
-
+include ("../includes/header.html");
+echo "<h1> Registered Users </h1>";
 require("../database_connect.php");
+$display = 10; // number of records to be displayed on one page
 
-// prepare query string
-$q = "SELECT CONCAT(first_name, ', ', last_name) AS name, DATE_FORMAT(registration_date, '%M %d %Y') AS dr FROM users ORDER BY registration_date ASC";
+if (isset($_GET["p"]) && is_numeric($_GET["p"])) {
+    $pages = $_GET['p'];
+} else { // need to determine the number of users so you know how many pages are needed
+    $q = "SELECT COUNT(user_id) FROM users";
+    $r = @mysqli_query($dbc, $q);
+    $row = @mysqli_fetch_array($r, MYSQLI_NUM);
+    $records = $row[0];
+
+    if ($records > $display){
+        $pages = ceil($records/$display);
+    }else {
+        $pages = 1;
+    }
+}
+
+if (isset($_GET['s']) && is_numeric($_GET['s'])){
+    $start = $_GET['s'];
+}else {
+    $start = 0;
+}
+
+$q = "SELECT last_name, first_name, DATE_FORMAT (registration_date, '%M %d, %Y') AS dr, user_id FROM users ORDER BY registration_date ASC LIMIT $start, $display";
 $r = @mysqli_query($dbc, $q);
 
-$num = mysqli_num_rows($r);
+echo ' <table align="center" cellspacing="3" cellpadding="3" width="75%">';
+echo '<tr><td align="left"> <b>Name</b></td><td align="left"> <b>Date Registered</b></td></tr>';
 
-if ($num > 0){
+$bg = '#eeeeee';
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    $bg = ($bg == '#eeeeee' ? '#ffffff' : '#eeeeee');
 
-    echo "<p> There are currently $num registered users. </p>\n";
-
-    echo ' <table align="center" cellspacing="3" cellpadding="3" width="75%">';
-    echo '<tr><td align="left"> <b>Name</b></td><td align="left"> <b>Date Registered</b></td></tr>';
-
-    while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)){
-        echo '<tr><td align="left">' . $row['name'] . '</td><td align="left">' . $row['dr'] . '</td></tr>';
-    }
-    echo "</table>";
-    // free up resources
-    mysqli_free_result($r);
-} else { // error runnig the query
-    // Public message:
-    echo '<p class="error">There are currently no registered users.</p>';
-
+    echo '<tr bgcolor="' . $bg . '"><td align="left">' . $row['first_name'] . ", " . $row['last_name'] . '</td><td align="left">' . $row['dr'] . '</td></tr>';
 }
+echo '</table>';
+mysqli_free_result($r);
 mysqli_close($dbc);
 
-include("../includes/footer.html");
+if ($pages > 1) {
+    echo '<br> <p>';
+    $current_page = ($start / $display) + 1;
 
-?>
+    if ($current_page != 1) {
+        echo '<a href="following.php?s=' . ($start - $display) . '&p=' . $pages . '">Previous</a> ';
+    }
+
+    for ($i = 1; $i <= $pages; $i++) {
+        if ($i != $current_page) {
+            echo '<a href="following.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '">' . $i . '</a> ';
+        } else {
+            echo $i . ' ';
+        }
+    }
+
+    if ($current_page != $pages) {
+        echo '<a href="following.php?s=' . ($start + $display) . '&p=' . $pages . '">Next</a>';
+    }
+    echo "</p>";
+}
