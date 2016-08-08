@@ -15,8 +15,8 @@ if (!isset($_COOKIE['username'])){
 $page_title = "Logged In!";
 include ('../includes/header.html');
 
-echo "<h1> Loggec In! </h1> <p> Your are now logged in, {$_COOKIE['first_name']} </p>
+echo "<h1> Logged In! </h1> <p> Your are now logged in, {$_COOKIE['first_name']} </p>
       <p><a href='logout.php'>Logout</a></p>";
 
-include("../includes/styles.css");
+include("../includes/footer.html");
 ?>

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../includes/styles.css">
 <?php
 /**
  * Created by PhpStorm.
@@ -13,7 +14,5 @@ include("../includes/header.html");
 
 
 <?php
-
 include("../includes/footer.html");
-
 ?>

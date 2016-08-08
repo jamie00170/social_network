@@ -22,5 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
     mysqli_close($dbc);
 }
+
+
+
 include("login_page.php");
 

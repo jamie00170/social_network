@@ -11,6 +11,13 @@
             <li><a href="../htdocs/index.php">Home</a> </li>
             <li><a href="../htdocs/profile.php">Profile</a></li>
             <li><a href="../htdocs/registration.php">Register</a></li>
+            <li><?php
+if((isset($_COOKIE['username'])) && (basename($_SERVER['PHP_SELF']) != 'logout.php')) {
+    echo "<a href='logout.php'> Logout </a>";
+                } else {
+                echo " <a href='login.php' > Login </a> ";
+                }
+                ?></li>
         </ul>
     </div>
 
