@@ -6,6 +6,7 @@
  * Date: 04/08/2016
  * Time: 16:26
  */
+$page_title = 'Following';
 include ("../includes/header.html");
 echo "<h1> Registered Users </h1>";
 require("../database_connect.php");

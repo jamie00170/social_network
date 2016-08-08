@@ -7,6 +7,7 @@
  * Date: 03/08/2016
  * Time: 12:41
  */
+$page_title = 'Change Password';
 include("../includes/header.html");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -46,7 +47,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $r = @mysqli_query($dbc, $q);
 
             if (mysqli_affected_rows($dbc) == 1) {
-                echo '<h1>Thank you!</h1> <p>Your password has been updated. In Chapter 12 you will actually be able to log in!</p><p><br /></p>';
+                echo '<h1>Thank you!</h1> <p>Your password has been updated. In Chapter 12 you will actually be able to log in! An email has been sent to confirm this. </p><p><br /></p>';
+                // send email confirming change
+                $to = $e;
+                $subject = 'Password Change';
+                $body = 'Your password has just been changed for the social network if this was not you then....';
+                mail($to, $subject, $body);
+
             } else {
                 echo '<h1>System Error</h1> <p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';
                 echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';

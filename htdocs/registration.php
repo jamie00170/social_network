@@ -66,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php
+$page_title = 'Register';
 include("../includes/header.html");
 ?>
 

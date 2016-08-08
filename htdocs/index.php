@@ -6,6 +6,7 @@
  * Date: 28/07/2016
  * Time: 10:55
  */
+$page_title = 'The Social Network';
 include("../includes/header.html");
 ?>
 <script>
