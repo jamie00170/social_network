@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #70db70;
 }
 
 li {
@@ -19,6 +19,16 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #248f24;
+}
+
+#inout {
+    position: fixed;
+    right:0;
+}
+
+html, body{
+    margin:0px;
+    padding:0px;
 }
 

@@ -20,14 +20,22 @@ if (isset($_COOKIE['username'])) {
 
     $row = @mysqli_fetch_array($r, MYSQLI_ASSOC);
 
+    //include profile picture
+
     echo '<p> Name: ' . $row["first_name"] . ' ' . $row["last_name"] . '</p>';
     echo '<p> Username: ' . $row["username"] . '</p>';
 
+    echo '<p> Following: </p>';
+    // have function in following.php to do this
 
 
 } else {
     echo "You are not logged in!";
 }
+
+// if this is not the user's profile:
+
+    //display follow button?
 
 ?>
 
