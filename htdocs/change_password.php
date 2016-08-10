@@ -11,6 +11,18 @@ $page_title = 'Change Password';
 include("../includes/header.html");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    function spam_scrubber($value){
+        // List of very bad values
+        $very_bad = array('to:', 'cc:', 'bcc:', 'content-type:', 'mime-version:', 'multipart-mixed:', 'content-transfer-encoding:');
+        foreach($very_bad as $v) {
+            if (stripos($value , $v) !== false) return "";
+        }
+
+        $value = str_replace(array("\r", "\n", "%0a", "%0d"), ' ', $value);
+        return trim($value);
+    }
+
     require("../database_connect.php");
 
     $errors = array();
@@ -49,10 +61,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             if (mysqli_affected_rows($dbc) == 1) {
                 echo '<h1>Thank you!</h1> <p>Your password has been updated. In Chapter 12 you will actually be able to log in! An email has been sent to confirm this. </p><p><br /></p>';
                 // send email confirming change
-                $to = $e;
-                $subject = 'Password Change';
-                $body = 'Your password has just been changed for the social network if this was not you then....';
-                mail($to, $subject, $body);
+                $to = spam_scrubber($e); // filter out spam
+                if ($to == "") {
+                    echo "confirmation email was not sent because the email address given was suspicious";
+                } else {
+                    $subject = 'Password Change';
+                    $body = 'Your password has just been changed for the social network if this was not you then....';
+                    mail($to, $subject, $body);
+                }
 
             } else {
                 echo '<h1>System Error</h1> <p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';

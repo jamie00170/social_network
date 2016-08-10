@@ -9,6 +9,26 @@
 $page_title = 'Profile'; // Change to user's name??
 include("../includes/header.html");
 
+if (isset($_COOKIE['username'])) {
+
+    require("../database_connect.php");
+    // Query to get user's details
+    $un = $_COOKIE['username'];
+    $q = "SELECT * FROM users WHERE username = '$un' LIMIT 1";
+
+    $r = @mysqli_query($dbc, $q);
+
+    $row = @mysqli_fetch_array($r, MYSQLI_ASSOC);
+
+    echo '<p> Name: ' . $row["first_name"] . ' ' . $row["last_name"] . '</p>';
+    echo '<p> Username: ' . $row["username"] . '</p>';
+
+
+
+} else {
+    echo "You are not logged in!";
+}
+
 ?>
 
 

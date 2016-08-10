@@ -16,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         setcookie('username', $data['username']);
         setcookie('first_name', $data['first_name']);
 
+        // Set user as active ??
+
         redirect_user('loggedin.php');
     } else {
         $errors = $data;
