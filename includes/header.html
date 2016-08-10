@@ -11,6 +11,7 @@
             <li><a href="../htdocs/index.php">Home</a> </li>
             <li><a href="../htdocs/profile.php">Profile</a></li>
             <li><a href="../htdocs/registration.php">Register</a></li>
+            <li><form action="search.php" method="get"><input type="text" class="tftextinput" name="searchtext" size="21" maxlength="120" placeholder="Search for other users..." required><input type="submit" value="search" class="tfbutton"></form> </li>
             <li id="inout"><?php
 if((isset($_COOKIE['username'])) && (basename($_SERVER['PHP_SELF']) != 'logout.php')) {
     echo "<a href='logout.php'> Logout </a>";
