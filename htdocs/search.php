@@ -21,10 +21,12 @@ if (!empty($_GET['searchtext'])){
     $r = @mysqli_query($dbc, $q);
 
     while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-        echo $row['first_name'] . " " . $row['last_name'];
+        echo '<p>' . $row['first_name'] . " " . $row['last_name'] . '</p>';
     }
 
     // have a form with hidden fields to contain a link to their profile??
+    // redirect user
+
 
 }else {
     echo "no text input";
