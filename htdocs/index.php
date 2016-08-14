@@ -15,19 +15,40 @@ include("../includes/header.html");
 // else
 //      show login homepage
 
-if (isset($_COOKIE['username'])) { ?>
+if (isset($_COOKIE['username'])) { // display map ?>
 
+    <div id="map" style="width:500px; height:500px;"> </div>
     <script>
-        navigator.geolocation.getCurrentPosition(function(pos) {
-            var latitude = pos.coords.latitude;
-            var longitude = pos.coords.longitude;
-            alert("Your position: " + latitude + ", " + longitude);
-        });
+
+        function initMap() {
+
+            navigator.geolocation.getCurrentPosition(function(pos) {
+                var latitude = pos.coords.latitude;
+                var longitude = pos.coords.longitude;
+
+                var myLatLng = {lat: latitude, lng: longitude};
+
+                // Create a map object and specify the DOM element for display.
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: latitude, lng: longitude},
+                    scrollwheel: false,
+                    zoom: 8
+                });
+
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: 'Hello World!'
+                });
+            });
+        }
+
+        initMap();
+
+
     </script>
-
-    // display map
-
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA60VZ6vHOaGaFt1gjTaAH8hMdB_Lv6MY&callback=initMap"
+            async defer></script>
 
 <?php } else {
     // display login
