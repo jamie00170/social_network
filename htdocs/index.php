@@ -17,7 +17,9 @@ include("../includes/header.html");
 
 if (isset($_COOKIE['username'])) { // display map ?>
 
-    <div id="map" style="width:500px; height:500px;"> </div>
+    <div id="map" style="width:1365px; height:595px;"> </div>
+
+    <script src="js/jquery-3.1.0.min.js"></script>
     <script>
 
         function initMap() {
