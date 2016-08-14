@@ -16,6 +16,7 @@ include("../includes/header.html");
 //      show login homepage
 
 if (isset($_COOKIE['username'])) { ?>
+
     <script>
         navigator.geolocation.getCurrentPosition(function(pos) {
             var latitude = pos.coords.latitude;
@@ -25,6 +26,8 @@ if (isset($_COOKIE['username'])) { ?>
     </script>
 
     // display map
+
+
 
 <?php } else {
     // display login

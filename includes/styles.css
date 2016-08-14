@@ -3,8 +3,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: -webkit-gradient(linear, left top, left bottom, from(green), to(#70db70));
-    background: -moz-linear-gradient(top,  green,  #70db70);
+    background: -webkit-gradient(linear, left top, left bottom, from(#0066ff), to(#4d94ff) );
+    background: -moz-linear-gradient(top, #0066ff, #4d94ff );
 }
 
 li {
@@ -22,8 +22,9 @@ li input, a{
 
 
 li a:hover {
-    background-color: #248f24;
+    background-color: #0066ff;
 }
+
 
 #inout {
     position: fixed;
@@ -38,12 +39,12 @@ html, body{
 .tftextinput{
     font-family: Arial, Helvetica, sans-serif;
     font-size:14px;
-    border:1px solid green; border-right:0px;
+    border:1px solid #0066ff; border-right:0px;
     border-top-left-radius: 5px 5px;
     border-bottom-left-radius: 5px 5px;
     position: fixed;
     right: 100px;
-    color: green;
+    color: #0066ff;
     width: 250px;
     text-align: left;
 }
@@ -56,10 +57,9 @@ html, body{
     text-align: center;
     text-decoration: none;
     color: #ffffff;
-    border: solid 1px green; border-right:0px;
-    background: green;
-    background: -webkit-gradient(linear, left top, left bottom, from(green), to(#70db70));
-    background: -moz-linear-gradient(top,  green,  #70db70);
+    border: solid 1px #0066ff; border-right:0px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0066ff), to(#4d94ff) );
+    background: -moz-linear-gradient(top, #0066ff, #4d94ff );
     border-top-right-radius: 5px 5px;
     border-bottom-right-radius: 5px 5px;
     position: fixed;
@@ -67,9 +67,8 @@ html, body{
 }
 .tfbutton:hover {
     text-decoration: none;
-    background: greenyellow;
-    background: -webkit-gradient(linear, left top, left bottom, from(green), to(#70db70));
-    background: -moz-linear-gradient(top,  green,  #70db70);
+    background: -webkit-gradient(linear, left top, left bottom, from(#0066ff), to(#4d94ff) );
+    background: -moz-linear-gradient(top, #0066ff, #4d94ff );
 }
 /* Fixes submit button height problem in Firefox */
 .tfbutton::-moz-focus-inner {
