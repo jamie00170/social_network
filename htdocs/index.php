@@ -150,6 +150,10 @@ if (isset($_COOKIE['username'])) { // display map ?>
 
 <?php } else {
     // display login
+    if (isset($_COOKIE["just_registered"])){
+        echo "You are now registered! You can now login Below.";
+    }
+    setcookie("just_registered", "", time()-3600);
     ?>
 
     <h1>Login</h1>

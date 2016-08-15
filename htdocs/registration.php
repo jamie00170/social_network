@@ -4,6 +4,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = array();
     // register the user in the database
+    include("login_functions.php");
     require("../database_connect.php");
 
     if (empty($_POST['username'])) {
@@ -55,9 +56,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }else{ // else display error
             echo '<h1>System Error</h1> <p class="error">You could not be registered due to a system error. We apologize for any inconvenience.</p>';
             echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q .  '</p>';
+
+
         }
+
+        setcookie("just_registered", true);
+
         mysqli_close($dbc);
+        redirect_user();
         exit();
+
     }else { // Report the errors.
         echo '<h1>Error!</h1> <p class="error">The following error(s) occurred:<br />';
         foreach ($errors as $msg) {
@@ -89,7 +97,7 @@ include("../includes/header.html");
 <form method="post" action="registration.php">
     <fieldset>
         <!-- Max length of input fields have to agree with database -->
-        Username: <input type="text" name="username" size="20" maxlength="30" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>"> <br>
+        Username: <input type="text" autofocus name="username" size="20" maxlength="30" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>"> <br>
         First Name: <input type="text" name="first_name" size="15" maxlength="20" value="<?php  if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>"> <br>
         Last Name: <input type="text" name="last_name" size="15" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>"> <br>
         Email Address: <input type="text" name="email" size="20" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"> <br>
