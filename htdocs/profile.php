@@ -23,14 +23,12 @@ if (isset($_COOKIE['username'])) {
     echo '<p> Name: ' . $row["first_name"] . ' ' . $row["last_name"] . '</p>';
     echo '<p> Username: ' . $row["username"] . '</p>';
 
-    echo '<p> Following: </p>';
-    // have function in following.php to do this
-
     $username = $row['username'];
 
     //include profile picture
     if (file_exists("../uploads/$username.jpg")){
         // display picture
+        echo "<img src='../uploads/$username.jpg' alt='Could not load profile picture' width='200' height='200'>";
     } else {
         //give option to upload one
         ?>
@@ -41,8 +39,11 @@ if (isset($_COOKIE['username'])) {
             <input type="submit" name="submit" value="Confirm" />
         </form>
 
-  <?php  }
 
+
+  <?php  }
+    echo '<p> Following: </p>';
+    // have function in following.php to do this
 
 } else {
     echo "You are not logged in!";
