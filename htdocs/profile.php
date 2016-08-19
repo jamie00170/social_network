@@ -20,13 +20,28 @@ if (isset($_COOKIE['username'])) {
 
     $row = @mysqli_fetch_array($r, MYSQLI_ASSOC);
 
-    //include profile picture
-
     echo '<p> Name: ' . $row["first_name"] . ' ' . $row["last_name"] . '</p>';
     echo '<p> Username: ' . $row["username"] . '</p>';
 
     echo '<p> Following: </p>';
     // have function in following.php to do this
+
+    $username = $row['username'];
+
+    //include profile picture
+    if (isset($_FILES["$username.jpg"])){
+        // display picture
+    } else {
+        //give option to upload one
+        ?>
+        <form enctype="multipart/form-data" action="upload.php" method="post">
+            <!-- <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> -->
+            <input type="hidden" name="username" value=<?php echo $username ?> />
+            Upload a profile picture: <input type="file" name="upload" />
+            <input type="submit" name="submit" value="Confirm" />
+        </form>
+
+  <?php  }
 
 
 } else {
