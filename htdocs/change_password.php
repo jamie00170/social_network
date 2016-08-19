@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../includes/styles.css" >
-
 <?php
 /**
  * Created by PhpStorm.

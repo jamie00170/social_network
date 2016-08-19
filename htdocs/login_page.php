@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../includes/styles.css">
+<link rel="stylesheet" href="css/styles.css">
 <?php
 /**
  * Created by PhpStorm.

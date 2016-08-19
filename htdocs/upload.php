@@ -1,5 +1,4 @@
 <head>
-    <link rel="stylesheet" href="../includes/styles.css">
     <title>Upload a Profile Picture</title>
 </head>
 <body>

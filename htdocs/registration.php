@@ -89,7 +89,6 @@ include("../includes/header.html");
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="stylesheet" href="../includes/styles.css">
 </head>
 <body>
 <h1>Register for the Site!</h1>
