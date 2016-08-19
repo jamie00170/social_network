@@ -29,7 +29,7 @@ if (isset($_COOKIE['username'])) {
     $username = $row['username'];
 
     //include profile picture
-    if (isset($_FILES["$username.jpg"])){
+    if (file_exists("../uploads/$username.jpg")){
         // display picture
     } else {
         //give option to upload one
