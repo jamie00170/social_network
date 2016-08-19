@@ -19,6 +19,9 @@ if (isset($_COOKIE['username'])) { // display map ?>
     <div id="map" style="width:1365px; height:595px;"> </div>
 
     <script src="js/jquery-3.1.0.min.js"></script>
+    <script>
+        var username = <?php echo json_encode($_COOKIE['username']); ?>;
+    </script>
     <script src="js/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA60VZ6vHOaGaFt1gjTaAH8hMdB_Lv6MY&callback=initMap"
             async defer></script>

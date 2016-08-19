@@ -108,15 +108,22 @@ function initMap() {
             scrollwheel: true,
             zoom: 8,
             styles: styleArray
-
         });
 
         // for all users the current user is following set a marker - use AJAX
 
+        var myIcon = {
+            url: "../../uploads/" + username + ".jpg", // url
+            scaledSize: new google.maps.Size(25, 25), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(0, 0) // anchor
+        };
+
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
-            title: 'User Position'
+            title: 'User Position',
+            icon: myIcon
 
     });
 });
