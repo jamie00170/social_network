@@ -6,7 +6,7 @@
  * Time: 10:19
  */
 if (!isset($_COOKIE['username'])) {
-    require("login_functions.php");
+    require("functions.php");
     redirect_user();
 } else {
     // Delete the cookies

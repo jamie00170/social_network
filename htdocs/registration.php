@@ -4,7 +4,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = array();
     // register the user in the database
-    include("login_functions.php");
+    include("functions.php");
     require("../database_connect.php");
 
     if (empty($_POST['username'])) {
