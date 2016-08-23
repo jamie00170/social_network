@@ -114,9 +114,9 @@ function initMap() {
 
         var myIcon = {
             url: "../../uploads/" + username + ".jpg", // url
-            scaledSize: new google.maps.Size(25, 25), // scaled size
-            origin: new google.maps.Point(0,0), // origin
-            anchor: new google.maps.Point(0, 0) // anchor
+            scaledSize: new google.maps.Size(20, 20) // scaled size
+            //origin: new google.maps.Point(0,0), // origin
+            //anchor: new google.maps.Point(0, 0) // anchor
         };
 
         var marker = new google.maps.Marker({
@@ -125,7 +125,9 @@ function initMap() {
             title: 'User Position',
             icon: myIcon
 
-    });
+        });
+
+
 });
 }
 
