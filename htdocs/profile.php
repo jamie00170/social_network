@@ -7,6 +7,25 @@
  */
 $page_title = 'Profile'; // Change to user's name??
 include("../includes/header.html");
+require("functions.php");
+
+function display_following($dbc){
+
+    $current_user_id = get_user_id($dbc, $_COOKIE['username']);
+
+    $q = "SELECT * FROM following WHERE user_id='$current_user_id'";
+    $r = @mysqli_query($dbc, $q);
+    while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+        // for each user the current user is following, return their name/ username?
+        $following_user_id = $row['follower_id'];
+        $q = "SELECT first_name, last_name FROM users WHERE user_id='$following_user_id'";
+        $r = @mysqli_query($dbc, $q);
+        $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
+        echo '<p>' . '&nbsp &nbsp'  . $row['first_name'] . " " . $row['last_name'] . '</p>';
+    }
+
+}
+
 
 if (isset($_COOKIE['username'])) {
 
@@ -42,7 +61,7 @@ if (isset($_COOKIE['username'])) {
 
   <?php  }
     echo '<p> Following: </p>';
-    // have function in following.php to do this
+        display_following($dbc);
 
 
 } else {

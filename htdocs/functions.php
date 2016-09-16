@@ -20,3 +20,14 @@ function redirect_user ($page = 'index.php'){
     header ("Location: $url");
     exit();
 }
+
+function get_user_id($dbc, $username){
+
+    $q = "SELECT user_id FROM users WHERE username='$username'";
+
+    $r = @mysqli_query($dbc, $q);
+    $row = @mysqli_fetch_array($r, MYSQLI_ASSOC);
+
+    return $row['user_id'];
+
+}
