@@ -24,11 +24,13 @@ if (!empty($_GET['searchtext'])){
     while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
         echo '<p>' . $row['first_name'] . " " . $row['last_name'] . '</p>';
         $uname = $row['username'];
-        echo '<form method="post" action="follow.php" >
-                <input type="submit" value="Follow" >
-                <input type="hidden" name="username" value="<?php echo $uname; ?>" >
-              </form>';
-        echo '</br>';
+        ?>
+        <form method="post" action="follow.php" >
+            <input type="submit" value="Follow" >
+            <input type="hidden" name="username" value="<?php echo $uname; ?>" >
+        </form>
+        </br>
+    <?php
     }
 
     // have a form with hidden fields to contain a link to their profile??
