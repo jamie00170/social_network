@@ -44,6 +44,7 @@ if (isset($_COOKIE['username'])) {
     echo '<p> Following: </p>';
     // have function in following.php to do this
 
+
 } else {
     echo "You are not logged in!";
 }
