@@ -33,11 +33,26 @@ if (!empty($_GET['searchtext'])){
 
     $search_for = explode(" ", $_GET['searchtext']);
 
-    $first_name = $search_for[0];
-    $last_name = $search_for[1];
+    // If both first name and last name are given
+    if (count($search_for) == 2){
+        $first_name = $search_for[0];
+        $last_name = $search_for[1];
 
-    $q = "SELECT username, first_name, last_name FROM users WHERE first_name='$first_name' AND last_name='$last_name'";
-    search_and_display_users($dbc, $q);
+        $q = "SELECT username, first_name, last_name
+              FROM users
+              WHERE first_name='$first_name'
+              AND last_name='$last_name'";
+        search_and_display_users($dbc, $q);
+    }
+
+    // If one name is given
+    if (count($search_for) == 1){
+        $given_name = $search_for[0];
+
+        $q = "SELECT username, first_name, last_name FROM users WHERE first_name='$given_name' OR last_name='$given_name'";
+        search_and_display_users($dbc, $q);
+    }
+
 
     // have a form with hidden fields to contain a link to their profile??
     // redirect user
