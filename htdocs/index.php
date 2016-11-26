@@ -20,7 +20,9 @@ if (isset($_COOKIE['username'])) { // display map ?>
 
     <script src="js/jquery-3.1.0.min.js"></script>
     <script>
+        // prepare data needed by map.js
         var username = <?php echo json_encode($_COOKIE['username']); ?>;
+        // need a structure to hold all user's current user is following and there locations i.e. (lat, long)
     </script>
     <script src="js/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA60VZ6vHOaGaFt1gjTaAH8hMdB_Lv6MY&callback=initMap"

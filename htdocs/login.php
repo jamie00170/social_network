@@ -32,7 +32,7 @@ function check_login ($dbc, $username = "", $pass = ""){
             $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
             return array(true, $row);
         } else { // not a match
-            $errors[] = "The username and password entered do not match those on file";
+            $errors[] = "The username and password entered do not match any in our system";
         }
     }
     return array(false, $errors);

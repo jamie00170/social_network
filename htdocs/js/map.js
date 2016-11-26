@@ -113,7 +113,6 @@ function initMap() {
         // for all users the current user is following set a marker - use AJAX
 
 
-
         var myIcon = {
             url: "../uploads/" + username + ".jpg", // url
             scaledSize: new google.maps.Size(20, 20) // scaled size
